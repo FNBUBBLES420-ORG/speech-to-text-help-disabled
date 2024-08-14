@@ -179,6 +179,50 @@ if errorlevel 1 (
     echo.
 )
 
+:: Install python-Levenshtein
+echo.
+echo ============================
+echo Installing python-Levenshtein...
+echo ============================
+pip install python-Levenshtein
+if errorlevel 1 (
+    echo.
+    echo ============================
+    echo ERROR: Failed to install python-Levenshtein.
+    echo Please check your internet connection or the package name.
+    echo ============================
+    pause
+    exit /b 1
+) else (
+    echo.
+    echo ============================
+    echo python-Levenshtein installed successfully.
+    echo ============================
+    echo.
+)
+
+:: Install SpeechRecognition
+echo.
+echo ============================
+echo Installing SpeechRecognition...
+echo ============================
+pip install SpeechRecognition
+if errorlevel 1 (
+    echo.
+    echo ============================
+    echo ERROR: Failed to install SpeechRecognition.
+    echo Please check your internet connection or the package name.
+    echo ============================
+    pause
+    exit /b 1
+) else (
+    echo.
+    echo ============================
+    echo SpeechRecognition installed successfully.
+    echo ============================
+    echo.
+)
+
 echo.
 echo ============================
 echo All packages installed successfully.
