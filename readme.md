@@ -4,6 +4,8 @@
 
 The Speech Recognition Assistant is a Python-based tool designed to help individuals with speech difficulties convert their spoken words into text. This tool leverages advanced speech recognition models, audio processing, and natural language processing techniques to provide accurate and contextually appropriate text output. It includes a user-friendly GUI built with Tkinter.
 
+[FNBubbles420 ORG on github](https://github.com/FNBUBBLES420-ORG/readme.md)
+
 ## Features
 
 - **Deep Learning with Wav2Vec 2.0**: Utilizes Facebook's Wav2Vec 2.0 model for robust and adaptable speech recognition.
