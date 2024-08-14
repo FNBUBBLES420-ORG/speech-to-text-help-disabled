@@ -6,3 +6,5 @@ fuzzywuzzy
 nltk
 soundfile
 tk
+python-Levenshtein
+SpeechRecognition
