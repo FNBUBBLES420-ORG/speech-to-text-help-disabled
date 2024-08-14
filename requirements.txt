@@ -8,3 +8,4 @@ soundfile
 tk
 python-Levenshtein
 SpeechRecognition
+pyaudio
