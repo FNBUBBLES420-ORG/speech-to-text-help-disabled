@@ -223,6 +223,28 @@ if errorlevel 1 (
     echo.
 )
 
+:: Install pyaudio
+echo.
+echo ============================
+echo Installing pyaudio...
+echo ============================
+pip install pyaudio
+if errorlevel 1 (
+    echo.
+    echo ============================
+    echo ERROR: Failed to install pyaudio.
+    echo Please check your internet connection or the package name.
+    echo ============================
+    pause
+    exit /b 1
+) else (
+    echo.
+    echo ============================
+    echo pyaudio installed successfully.
+    echo ============================
+    echo.
+)
+
 echo.
 echo ============================
 echo All packages installed successfully.
