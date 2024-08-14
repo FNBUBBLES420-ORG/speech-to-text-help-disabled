@@ -51,10 +51,17 @@ pip install torch transformers pydub librosa fuzzywuzzy nltk soundfile tk
 
 ## Acknowledgements
 
-- **Facebook AI:** For the Wav2Vec 2.0 model.
-- **NLTK:** For providing NLP tools.
-- **Librosa:** For audio processing.
-- **Tkinter:** For the GUI framework.
+- **[Facebook AI](https://github.com/pytorch/fairseq)**: For the Wav2Vec 2.0 model.
+- **[NLTK](https://www.nltk.org/)**: For providing NLP tools.
+- **[Librosa](https://librosa.org/)**: For audio processing.
+- **[Pydub](https://github.com/jiaaro/pydub)**: For simple and easy audio manipulation.
+- **[Tkinter](https://docs.python.org/3/library/tkinter.html)**: For the GUI framework.
+- **[FuzzyWuzzy](https://github.com/seatgeek/fuzzywuzzy)**: For string matching and scoring.
+- **[SoundFile](https://pysoundfile.readthedocs.io/en/latest/)**: For reading and writing sound files.
+- **[Hugging Face Transformers](https://github.com/huggingface/transformers)**: For providing state-of-the-art machine learning models.
+- **[Python-Levenshtein](https://github.com/ztane/python-Levenshtein)**: For fast and efficient Levenshtein distance computation.
+- **[SpeechRecognition](https://github.com/Uberi/speech_recognition)**: For converting speech to text.
+
 
 -----------------
 ### How to Use:
