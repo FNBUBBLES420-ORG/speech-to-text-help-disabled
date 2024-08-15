@@ -81,5 +81,51 @@ pip install torch transformers pydub librosa fuzzywuzzy nltk soundfile tk
 This setup should provide everything you need to get the project up and running, with clear instructions and a straightforward workflow.
 
 
+## 🎥 How to Install `ffmpeg` on Windows
+
+### 🛠️ Step 1: Download `ffmpeg`
+
+- **🌐 Visit the Official `ffmpeg` Website**:
+  - Go to the [official `ffmpeg` download page](https://ffmpeg.org/download.html).
+  
+- **💻 Select the Windows Build**:
+  - Under "Get packages & executable files", look for "Windows builds by BtbN" and click on the link.
+
+- **⬇️ Download the Latest Release**:
+  - On the BtbN page, select the latest release version.
+  - Choose the build based on your system architecture (`ffmpeg-master-latest-win64-gpl.zip` for 64-bit or `ffmpeg-master-latest-win32-gpl.zip` for 32-bit).
+  - Click the link to download the zip file.
+
+### 📁 Step 2: Extract the Files
+
+- **📂 Extract the Downloaded Zip File**:
+  - Locate the downloaded `ffmpeg` zip file in your Downloads folder.
+  - Right-click the zip file and select "Extract All..." or use a tool like 7-Zip or WinRAR.
+  - Extract the contents to a folder, for example, `C:\ffmpeg`.
+
+### ⚙️ Step 3: Add `ffmpeg` to Your System Path
+
+- **🖥️ Open System Properties**:
+  - Right-click on "This PC" or "Computer" on your desktop or in File Explorer, and select "Properties".
+  - Click on "Advanced system settings" on the left side.
+  - In the System Properties window, click on the "Environment Variables" button.
+
+- **🔧 Edit the System Path**:
+  - In the Environment Variables window, under the "System variables" section, scroll down and select the `Path` variable, then click "Edit".
+  - In the Edit Environment Variable window, click "New" and enter the path to the `bin` directory inside your `ffmpeg` folder (e.g., `C:\ffmpeg\bin`).
+  - Click "OK" to close all windows.
+
+### ✅ Step 4: Verify the Installation
+
+- **💬 Open Command Prompt**:
+  - Press `Win + R`, type `cmd`, and press Enter.
+
+- **🔍 Check `ffmpeg` Version**:
+  - In the Command Prompt, type `ffmpeg -version` and press Enter.
+  - If installed correctly, you'll see information about the `ffmpeg` version and configuration.
+
+### 📝 Summary
+
+By following these steps, you'll have `ffmpeg` installed and configured on your Windows system, ready for use with `pydub` and other audio processing tasks.
 
 
