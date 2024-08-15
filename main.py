@@ -1,6 +1,6 @@
 import torch
 import torchaudio
-from transformers import Wav2Vec2ForCTC, Wav2Vec2Tokenizer
+from transformers import Wav2Vec2ForCTC, Wav2Vec2Processor
 import librosa
 import numpy as np
 from fuzzywuzzy import process
@@ -10,12 +10,16 @@ from pydub import AudioSegment
 import tkinter as tk
 from tkinter import messagebox, simpledialog
 import speech_recognition as sr  # <-- Importing speech recognition
+import os
+
+# Disable symlink warning
+os.environ['HF_HUB_DISABLE_SYMLINKS_WARNING'] = '1'
 
 # Download NLTK data (only need to run once)
 nltk.download('stopwords')
 
-# Load the pre-trained Wav2Vec 2.0 model and tokenizer
-tokenizer = Wav2Vec2Tokenizer.from_pretrained("facebook/wav2vec2-base-960h")
+# Load the pre-trained Wav2Vec 2.0 model and processor
+processor = Wav2Vec2Processor.from_pretrained("facebook/wav2vec2-base-960h")
 model = Wav2Vec2ForCTC.from_pretrained("facebook/wav2vec2-base-960h")
 
 # Expanded list of predefined phrases
@@ -73,10 +77,10 @@ def pre_process_audio(audio_data):
 def recognize_speech(audio_data):
     """Transcribe speech using Wav2Vec 2.0."""
     y, sr = pre_process_audio(audio_data)
-    input_values = tokenizer(y, return_tensors="pt", padding="longest").input_values
+    input_values = processor(y, return_tensors="pt", padding="longest", sampling_rate=sr).input_values
     logits = model(input_values).logits
     predicted_ids = torch.argmax(logits, dim=-1)
-    transcript = tokenizer.batch_decode(predicted_ids)[0]
+    transcript = processor.batch_decode(predicted_ids, clean_up_tokenization_spaces=True)[0]
     return transcript.lower()
 
 def match_phrase(transcript):
