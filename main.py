@@ -11,9 +11,14 @@ import tkinter as tk
 from tkinter import messagebox, simpledialog
 import speech_recognition as sr  # <-- Importing speech recognition
 import os
+import warnings
 
 # Disable symlink warning
 os.environ['HF_HUB_DISABLE_SYMLINKS_WARNING'] = '1'
+
+# Suppress specific warnings that are non-critical
+warnings.filterwarnings("ignore", category=UserWarning, module='pydub.utils')
+warnings.filterwarnings("ignore", category=FutureWarning, module='transformers.tokenization_utils_base')
 
 # Download NLTK data (only need to run once)
 nltk.download('stopwords')
@@ -104,23 +109,27 @@ def feedback_loop(recognized_text):
 
 def start_recognition():
     recognizer = sr.Recognizer()
-    mic = sr.Microphone()
 
-    with mic as source:
-        recognizer.adjust_for_ambient_noise(source)
-        audio = recognizer.listen(source)
-        audio_data = audio.get_wav_data()
+    # Check for microphone availability
+    if sr.Microphone.list_microphone_names():
+        mic = sr.Microphone()
+        with mic as source:
+            recognizer.adjust_for_ambient_noise(source)
+            audio = recognizer.listen(source)
+            audio_data = audio.get_wav_data()
 
-        # Save the audio to a file
-        with open("temp.wav", "wb") as f:
-            f.write(audio_data)
+            # Save the audio to a file
+            with open("temp.wav", "wb") as f:
+                f.write(audio_data)
 
-        # Recognize speech
-        transcript = recognize_speech("temp.wav")
-        matched_phrase = match_phrase(transcript)
-        final_output = feedback_loop(matched_phrase)
-        
-        messagebox.showinfo("Final Output", f"You said: {final_output}")
+            # Recognize speech
+            transcript = recognize_speech("temp.wav")
+            matched_phrase = match_phrase(transcript)
+            final_output = feedback_loop(matched_phrase)
+            
+            messagebox.showinfo("Final Output", f"You said: {final_output}")
+    else:
+        messagebox.showerror("Error", "No microphone found. Please connect a microphone and try again.")
 
 def create_gui():
     root = tk.Tk()
