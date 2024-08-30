@@ -14,6 +14,12 @@ The Speech Recognition Assistant is a Python-based tool designed to help individ
 - **Continuous Learning**: Includes a feedback loop where the system learns from user corrections, improving over time.
 - **User-Friendly GUI**: A simple graphical user interface (GUI) built with Tkinter makes the application easy to use.
 
+ ### If you dont have a pet python here is a couple below:
+- **YOU ONLY NEED ONLY VERSION OF PYTHON TO RUN THIS !!**
+- [Python 3.11.6](https://github.com/KernFerm/Py3.11.6installer)
+- [Python 3.11.9](https://github.com/KernFerm/Py3.11.9installer)
+- [Python 3.12.1](https://github.com/KernFerm/Py3.12.1-installer-batch)
+
 ## Requirements
 
 Before running the application, ensure you have the following dependencies installed:
