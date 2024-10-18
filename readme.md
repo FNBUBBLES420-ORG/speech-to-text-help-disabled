@@ -93,6 +93,7 @@ This setup should provide everything you need to get the project up and running,
 
 - **🌐 Visit the Official `ffmpeg` Website**:
   - Go to the [official `ffmpeg` download page](https://ffmpeg.org/download.html).
+  - [BtbN](https://github.com/BtbN/FFmpeg-Builds/releases)
   
 - **💻 Select the Windows Build**:
   - Under "Get packages & executable files", look for "Windows builds by BtbN" and click on the link.
