@@ -6,6 +6,8 @@ The Speech Recognition Assistant is a Python-based tool designed to help individ
 
 [FNBubbles420 ORG on github](https://github.com/FNBUBBLES420-ORG/readme.md)
 
+## [Funding](https://github.com/FNBUBBLES420-ORG/speech-to-text-help-disabled/blob/main/.github/FUNDING.yml)
+
 ## Features
 
 - **Deep Learning with Wav2Vec 2.0**: Utilizes Facebook's Wav2Vec 2.0 model for robust and adaptable speech recognition.
