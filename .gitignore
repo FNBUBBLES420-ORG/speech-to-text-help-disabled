@@ -1,0 +1,37 @@
+# Ignore Python cache and compiled files
+__pycache__/
+*.py[cod]
+
+# Ignore virtual environment directories (if you add them in the future)
+.venv/
+venv/
+env/
+ENV/
+
+# Ignore OS-specific files
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+Desktop.ini
+
+# Ignore IDE and editor config files
+.vscode/
+.idea/
+
+# Ignore log or temporary files
+*.log
+*.tmp
+
+# Ignore predefined_phrases.json if it is generated or updated programmatically
+predefined_phrases.json
+
+# Ignore temporary or backup files
+*.bak
+*.swp
+
+# If using Python packages that generate additional build artifacts
+*.egg-info/
+dist/
+build/
