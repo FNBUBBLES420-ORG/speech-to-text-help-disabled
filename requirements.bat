@@ -11,10 +11,10 @@ echo ============================
 pip install torch
 if errorlevel 1 (
     echo.
-    echo ============================
+    echo ============================================================
     echo ERROR: Failed to install torch.
     echo Please check your internet connection or the package name.
-    echo ============================
+    echo ============================================================
     pause
     exit /b 1
 ) else (
@@ -33,10 +33,10 @@ echo ============================
 pip install transformers
 if errorlevel 1 (
     echo.
-    echo ============================
+    echo ============================================================
     echo ERROR: Failed to install transformers.
     echo Please check your internet connection or the package name.
-    echo ============================
+    echo ============================================================
     pause
     exit /b 1
 ) else (
@@ -55,10 +55,10 @@ echo ============================
 pip install pydub
 if errorlevel 1 (
     echo.
-    echo ============================
+    echo ============================================================
     echo ERROR: Failed to install pydub.
     echo Please check your internet connection or the package name.
-    echo ============================
+    echo ============================================================
     pause
     exit /b 1
 ) else (
@@ -77,10 +77,10 @@ echo ============================
 pip install librosa
 if errorlevel 1 (
     echo.
-    echo ============================
+    echo ============================================================
     echo ERROR: Failed to install librosa.
     echo Please check your internet connection or the package name.
-    echo ============================
+    echo ============================================================
     pause
     exit /b 1
 ) else (
@@ -99,10 +99,10 @@ echo ============================
 pip install fuzzywuzzy
 if errorlevel 1 (
     echo.
-    echo ============================
+    echo ============================================================
     echo ERROR: Failed to install fuzzywuzzy.
     echo Please check your internet connection or the package name.
-    echo ============================
+    echo ============================================================
     pause
     exit /b 1
 ) else (
@@ -121,10 +121,10 @@ echo ============================
 pip install nltk
 if errorlevel 1 (
     echo.
-    echo ============================
+    echo ============================================================
     echo ERROR: Failed to install nltk.
     echo Please check your internet connection or the package name.
-    echo ============================
+    echo ============================================================
     pause
     exit /b 1
 ) else (
@@ -143,10 +143,10 @@ echo ============================
 pip install soundfile
 if errorlevel 1 (
     echo.
-    echo ============================
+    echo ============================================================
     echo ERROR: Failed to install soundfile.
     echo Please check your internet connection or the package name.
-    echo ============================
+    echo ============================================================
     pause
     exit /b 1
 ) else (
@@ -165,10 +165,10 @@ echo ============================
 pip install tk
 if errorlevel 1 (
     echo.
-    echo ============================
+    echo ============================================================
     echo ERROR: Failed to install tk.
     echo Please check your internet connection or the package name.
-    echo ============================
+    echo ============================================================
     pause
     exit /b 1
 ) else (
@@ -187,10 +187,10 @@ echo ============================
 pip install python-Levenshtein
 if errorlevel 1 (
     echo.
-    echo ============================
+    echo ============================================================
     echo ERROR: Failed to install python-Levenshtein.
     echo Please check your internet connection or the package name.
-    echo ============================
+    echo ============================================================
     pause
     exit /b 1
 ) else (
@@ -209,10 +209,10 @@ echo ============================
 pip install SpeechRecognition
 if errorlevel 1 (
     echo.
-    echo ============================
+    echo ============================================================
     echo ERROR: Failed to install SpeechRecognition.
     echo Please check your internet connection or the package name.
-    echo ============================
+    echo ============================================================
     pause
     exit /b 1
 ) else (
@@ -231,10 +231,10 @@ echo ============================
 pip install pyaudio
 if errorlevel 1 (
     echo.
-    echo ============================
+    echo ============================================================
     echo ERROR: Failed to install pyaudio.
     echo Please check your internet connection or the package name.
-    echo ============================
+    echo ============================================================
     pause
     exit /b 1
 ) else (
@@ -242,6 +242,50 @@ if errorlevel 1 (
     echo ============================
     echo pyaudio installed successfully.
     echo ============================
+    echo.
+)
+
+:: Install tensorflow
+echo.
+echo ============================
+echo Installing tensorflow...
+echo ============================
+pip install tensorflow
+if errorlevel 1 (
+    echo.
+    echo ============================================================
+    echo ERROR: Failed to install tensorflow.
+    echo Please check your internet connection or the package name.
+    echo ============================================================
+    pause
+    exit /b 1
+) else (
+    echo.
+    echo ==================================
+    echo tensorflow installed successfully.
+    echo ==================================
+    echo.
+)
+
+:: Install torchaudio
+echo.
+echo ============================
+echo Installing torchaudio...
+echo ============================
+pip install torchaudio
+if errorlevel 1 (
+    echo.
+    echo ============================================================
+    echo ERROR: Failed to install torchaudio.
+    echo Please check your internet connection or the package name.
+    echo ============================================================
+    pause
+    exit /b 1
+) else (
+    echo.
+    echo ==================================
+    echo torchaudio installed successfully.
+    echo ==================================
     echo.
 )
 
