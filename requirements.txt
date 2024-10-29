@@ -9,3 +9,5 @@ tk
 python-Levenshtein
 SpeechRecognition
 pyaudio
+tensorflow
+torchaudio
