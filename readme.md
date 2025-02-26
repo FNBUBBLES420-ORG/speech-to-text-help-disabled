@@ -83,7 +83,7 @@ Contributions are welcome! Please open issues or submit pull requests if you'd l
 
 ## License 📄
 
-
+[Private License](https://github.com/FNBUBBLES420-ORG/speech-to-text-help-disabled/blob/main/LICENSE.md)
 
 ---
 
