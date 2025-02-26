@@ -89,6 +89,7 @@ The `config.py` file includes the following settings:
 
 ## Need Help??
 - Join the Discord [https://discord.fnbubbles420.org/invite](https://discord.fnbubbles420.org/invite)
+- Ping `Bubbles`
 
 ## Contributing 🤝
 
