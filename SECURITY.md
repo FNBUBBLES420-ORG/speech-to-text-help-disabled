@@ -9,3 +9,6 @@ currently being supported with security updates.
 | ------- | ------------------ |
 | 3.0.0   | :white_check_mark: |
 
+- `SpeechRecognition`
+- `PyAudio`
+- `customtkinter`
