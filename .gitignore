@@ -1,37 +1,33 @@
-# Ignore Python cache and compiled files
+# Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
 
-# Ignore virtual environment directories (if you add them in the future)
+# C extensions
+*.so
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+*.egg
+
+# Virtual environments
+.env/
 .venv/
-venv/
 env/
+venv/
 ENV/
 
-# Ignore OS-specific files
-# macOS
-.DS_Store
-
-# Windows
-Thumbs.db
-Desktop.ini
-
-# Ignore IDE and editor config files
+# Editor settings and scratch files
 .vscode/
 .idea/
-
-# Ignore log or temporary files
-*.log
-*.tmp
-
-# Ignore predefined_phrases.json if it is generated or updated programmatically
-predefined_phrases.json
-
-# Ignore temporary or backup files
-*.bak
 *.swp
+*.swo
 
-# If using Python packages that generate additional build artifacts
-*.egg-info/
-dist/
-build/
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# Output files that don't need to be shared
+# Uncomment the line below if transcription.txt should be ignored
+# transcription.txt
