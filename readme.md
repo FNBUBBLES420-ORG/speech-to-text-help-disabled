@@ -1,4 +1,4 @@
-# Speech to Text Application 🎙️✨
+# 🎙️✨ Speech to Text Application 🎙️✨
 
 🎙️ Welcome to the Speech to Text Application! 📝 This tool converts your spoken words into text in real time. With a sleek, modern interface powered by `customtkinter`, you can easily integrate this solution into your streaming setup or any project that needs speech-to-text capabilities. 🌟
 
