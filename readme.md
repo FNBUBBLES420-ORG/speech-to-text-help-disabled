@@ -87,6 +87,9 @@ The `config.py` file includes the following settings:
 - **Speech Not Detected**: Ensure your microphone is working correctly and consider increasing the ambient noise adjustment duration in `config.py`.
 - **Incorrect Transcription**: Speak clearly and check your internet connection since the application relies on Google's online speech recognition service.
 
+## Need Help??
+- Join the Discord [https://discord.fnbubbles420.org/invite](https://discord.fnbubbles420.org/invite)
+
 ## Contributing 🤝
 
 Contributions are welcome! Please open issues or submit pull requests if you'd like to help improve this project.
