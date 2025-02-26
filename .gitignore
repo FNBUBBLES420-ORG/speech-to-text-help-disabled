@@ -28,6 +28,10 @@ ENV/
 .DS_Store
 Thumbs.db
 
+# Batch files
+# Uncomment the line below if .bat files should be ignored
+# *.bat
+
 # Output files that don't need to be shared
 # Uncomment the line below if transcription.txt should be ignored
 # transcription.txt
