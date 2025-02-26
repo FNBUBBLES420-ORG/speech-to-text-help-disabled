@@ -1,13 +1,3 @@
-torch
-transformers
-pydub
-librosa
-fuzzywuzzy
-nltk
-soundfile
-tk
-python-Levenshtein
 SpeechRecognition
-pyaudio
-tensorflow
-torchaudio
+PyAudio
+customtkinter
