@@ -1,140 +1,90 @@
-# Speech Recognition Assistant
+# Speech to Text Application 🎙️✨
 
-## Overview
+Welcome to the Speech to Text Application! This tool converts your spoken words into text in real time. With a sleek, modern interface powered by `customtkinter`, you can easily integrate this solution into your streaming setup or any project that needs speech-to-text capabilities.
 
-The Speech Recognition Assistant is a Python-based tool designed to help individuals with speech difficulties convert their spoken words into text. This tool leverages advanced speech recognition models, audio processing, and natural language processing techniques to provide accurate and contextually appropriate text output. It includes a user-friendly GUI built with Tkinter.
+## Features 🚀
+- **Real-time Speech Recognition**: Convert your speech to text on the fly using Google Speech Recognition.
+- **User-friendly GUI**: Enjoy a modern and intuitive interface built with `customtkinter`.
+- **Configurable Settings**: Easily adjust ambient noise calibration, timeout durations, and more via `config.py`.
+- **Live Transcription**: See the transcribed text update live on-screen and save it to a file (`transcription.txt`) for further use.
+- **OBS Integration**: Seamlessly use the saved transcription file for live captioning in OBS.
 
-[FNBubbles420 ORG on github](https://github.com/FNBUBBLES420-ORG/readme.md)
+## Installation 🛠️
 
-## [Funding](https://github.com/FNBUBBLES420-ORG/speech-to-text-help-disabled/blob/main/.github/FUNDING.yml)
+## 📥 How to Download the Repo (First-Time Users)
 
-## Features
+--> Click the link to read [**Instructions**](https://www.gitprojects.fnbubbles420.org/how-to-download-repos) 📄.
 
-- **Deep Learning with Wav2Vec 2.0**: Utilizes Facebook's Wav2Vec 2.0 model for robust and adaptable speech recognition.
-- **Advanced Audio Pre-processing**: Includes noise reduction, dynamic range compression, and time stretching for better clarity.
-- **Contextual Phrase Matching**: Implements Natural Language Processing (NLP) to match recognized speech with predefined phrases.
-- **Continuous Learning**: Includes a feedback loop where the system learns from user corrections, improving over time.
-- **User-Friendly GUI**: A simple graphical user interface (GUI) built with Tkinter makes the application easy to use.
+2. **Set Up a Virtual Environment** (optional but recommended):
+    ```bash
+    python -m venv venv
+    source venv/bin/activate  # On Windows use: venv\Scripts\activate
+    ```
 
- ### If you dont have a pet python here is a couple below:
-- **YOU ONLY NEED ONLY VERSION OF PYTHON TO RUN THIS !!**
-- [Python 3.11.6](https://github.com/KernFerm/Py3.11.6installer)
-- [Python 3.11.9](https://github.com/KernFerm/Py3.11.9installer)
-- [Python 3.12.1](https://github.com/KernFerm/Py3.12.1-installer-batch)
+3. **Install the Required Packages**:
+    ```bash
+    pip install -r requirements.txt
+    ```
 
-## Requirements
+4. **Configure the Application**:
+    - Open the `config.py` file to adjust settings like ambient noise duration, timeout, and phrase time limits.
 
-Before running the application, ensure you have the following dependencies installed:
+## Usage 🎤
 
-```
-pip install torch transformers pydub librosa fuzzywuzzy nltk soundfile tk
-```
-- Alternatively, you can use the provided requirements.bat script to install these packages separately.
+1. **Run the Application**:
+    ```bash
+    python main.py
+    ```
 
-## How to Use
+2. **How to Use**:
+    - Click the **"Start Listening"** button to begin capturing your speech.
+    - Speak clearly into your microphone—the transcribed text will appear in the text area.
+    - The transcription is also saved in `transcription.txt` for use with OBS or any other application.
+    - Click **"Close"** to exit the application.
 
-1. **Run the Application:**
-- Execute the `main.py` script to launch the GUI.
-- The application will display a window with a "Start Recognition" button.
+## Using with OBS 📺
 
-2. **Start Speech Recognition:**
-- Click the "Start Recognition" button.
-- The application will listen to your speech and attempt to convert it to text.
+To integrate the transcription with OBS for live captioning, follow these steps:
 
-3. **Feedback and Correction:**
-- The application will display the recognized text and ask if it's correct.
-- If the text is incorrect, you can provide the correct phrase, which the system will learn and remember for future use.
+1. **Open OBS**.
+2. **Add a Text Source**:
+   - Click the **"+"** button in the **Sources** panel.
+   - Select **"Text (GDI+)"** on Windows or **"Text (FreeType 2)"** on other systems.
+   - Name your text source (e.g., "Live Captions").
+3. **Enable File Reading**:
+   - Check the **"Read from file"** option.
+   - Click **"Browse"** and select the `transcription.txt` file from your project directory.
+4. **Customize Appearance**:
+   - Adjust the font, color, size, and alignment to match your stream's style.
+5. **Position Your Captions**:
+   - Drag and drop the text source to your desired location on the OBS canvas.
+6. **Start Your Stream**:
+   - As the application writes new transcriptions to the file, OBS will automatically update the captions in real time!
 
-4. **View Final Output:**
-- After processing and possible correction, the final recognized text will be displayed in a message box.
+## Configuration ⚙️
 
-## Customization
+The `config.py` file includes the following settings:
 
-- **Predefined Phrases:** You can edit or add to the `predefined_phrases` list in the script to match the most common phrases the user might say.
-- **Model Training:** While the script uses a pre-trained model, you can replace it with a custom-trained model if necessary.
+- **APPEARANCE_MODE**: Set to `"dark"` or `"light"` for the GUI.
+- **THEME_COLOR**: Choose your desired theme color (e.g., `"blue"`).
+- **FONT**: Define the font type and size (e.g., `('Helvetica', 10)`).
+- **AMBIENT_NOISE_ADJUSTMENT_DURATION**: Duration in seconds for ambient noise calibration.
+- **TIMEOUT_DURATION**: Maximum time (in seconds) to wait for speech to start.
+- **PHRASE_TIME_LIMIT**: Maximum duration (in seconds) to capture a single phrase.
 
-## Contribution
+## Troubleshooting ❓
 
-- Feel free to fork this repository, make improvements, and submit pull requests. Your contributions are welcome!
+- **Speech Not Detected**: Ensure your microphone is working correctly and consider increasing the ambient noise adjustment duration in `config.py`.
+- **Incorrect Transcription**: Speak clearly and check your internet connection since the application relies on Google's online speech recognition service.
 
-## Acknowledgements
+## Contributing 🤝
 
-- **[Facebook AI](https://github.com/pytorch/fairseq)**: For the Wav2Vec 2.0 model.
-- **[NLTK](https://www.nltk.org/)**: For providing NLP tools.
-- **[Librosa](https://librosa.org/)**: For audio processing.
-- **[Pydub](https://github.com/jiaaro/pydub)**: For simple and easy audio manipulation.
-- **[Tkinter](https://docs.python.org/3/library/tkinter.html)**: For the GUI framework.
-- **[FuzzyWuzzy](https://github.com/seatgeek/fuzzywuzzy)**: For string matching and scoring.
-- **[SoundFile](https://pysoundfile.readthedocs.io/en/latest/)**: For reading and writing sound files.
-- **[Hugging Face Transformers](https://github.com/huggingface/transformers)**: For providing state-of-the-art machine learning models.
-- **[Python-Levenshtein](https://github.com/ztane/python-Levenshtein)**: For fast and efficient Levenshtein distance computation.
-- **[SpeechRecognition](https://github.com/Uberi/speech_recognition)**: For converting speech to text.
+Contributions are welcome! Please open issues or submit pull requests if you'd like to help improve this project.
 
-
------------------
-### How to Use:
-
-1. **Save the Files**: 
-   - Save the Python script as `main.py`.
-   - Save the batch script as `requirements.bat`.
-   - Save the README content as `README.md` in your project directory.
-
-2. **Run the Batch Script**: 
-   - Double-click the `requirements.bat` file to install all necessary packages.
-   - If an error occurs during installation, the script will notify you and stop.
-
-3. **Run the Main Script**: 
-   - After installing the dependencies, run `main.py` to start the application.
-
-This setup should provide everything you need to get the project up and running, with clear instructions and a straightforward workflow.
+## License 📄
 
 
-## 🎥 How to Install `ffmpeg` on Windows
 
-### 🛠️ Step 1: Download `ffmpeg`
+---
 
-- **🌐 Visit the Official `ffmpeg` Website**:
-  - Go to the [official `ffmpeg` download page](https://ffmpeg.org/download.html).
-  - [BtbN](https://github.com/BtbN/FFmpeg-Builds/releases)
-  
-- **💻 Select the Windows Build**:
-  - Under "Get packages & executable files", look for "Windows builds by BtbN" and click on the link.
-
-- **⬇️ Download the Latest Release**:
-  - On the BtbN page, select the latest release version.
-  - Choose the build based on your system architecture (`ffmpeg-master-latest-win64-gpl.zip` for 64-bit or `ffmpeg-master-latest-win32-gpl.zip` for 32-bit).
-  - Click the link to download the zip file.
-
-### 📁 Step 2: Extract the Files
-
-- **📂 Extract the Downloaded Zip File**:
-  - Locate the downloaded `ffmpeg` zip file in your Downloads folder.
-  - Right-click the zip file and select "Extract All..." or use a tool like 7-Zip or WinRAR.
-  - Extract the contents to a folder, for example, `C:\ffmpeg`.
-
-### ⚙️ Step 3: Add `ffmpeg` to Your System Path
-
-- **🖥️ Open System Properties**:
-  - Right-click on "This PC" or "Computer" on your desktop or in File Explorer, and select "Properties".
-  - Click on "Advanced system settings" on the left side.
-  - In the System Properties window, click on the "Environment Variables" button.
-
-- **🔧 Edit the System Path**:
-  - In the Environment Variables window, under the "System variables" section, scroll down and select the `Path` variable, then click "Edit".
-  - In the Edit Environment Variable window, click "New" and enter the path to the `bin` directory inside your `ffmpeg` folder (e.g., `C:\ffmpeg\bin`).
-  - Click "OK" to close all windows.
-
-### ✅ Step 4: Verify the Installation
-
-- **💬 Open Command Prompt**:
-  - Press `Win + R`, type `cmd`, and press Enter.
-
-- **🔍 Check `ffmpeg` Version**:
-  - In the Command Prompt, type `ffmpeg -version` and press Enter.
-  - If installed correctly, you'll see information about the `ffmpeg` version and configuration.
-
-### 📝 Summary
-
-By following these steps, you'll have `ffmpeg` installed and configured on your Windows system, ready for use with `pydub` and other audio processing tasks.
-
-
+Enjoy converting your voice to text with this awesome application! If you have any questions or feedback, feel free to reach out. Happy coding! 😃
